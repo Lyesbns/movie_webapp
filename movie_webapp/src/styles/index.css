@@ -1,0 +1,40 @@
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	min-height: 100%;
+	position: relative;
+	overflow-x: hidden;
+	background-color: #ffffff;
+	background-image:
+		linear-gradient(to right, #e4e4e7 1px, transparent 1px),
+		linear-gradient(to bottom, #e4e4e7 1px, transparent 1px);
+	background-size: 40px 40px;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	background: rgba(255, 255, 255, 0.92);
+	mask-image: radial-gradient(ellipse at center, transparent 20%, black);
+	-webkit-mask-image: radial-gradient(ellipse at center, transparent 20%, black);
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #000000;
+		background-image:
+			linear-gradient(to right, #262626 1px, transparent 1px),
+			linear-gradient(to bottom, #262626 1px, transparent 1px);
+	}
+
+	body::before {
+		background: rgba(0, 0, 0, 0.92);
+	}
+}
