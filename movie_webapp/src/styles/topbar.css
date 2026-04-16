@@ -23,6 +23,15 @@
 
 }
 
+.topbar-container:hover{
+    background: rgba(255, 255, 255, 0.185);
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.125);
+    backdrop-filter: blur(1.98px);
+    -webkit-backdrop-filter: blur(1.98px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
 .topbar-container p {
     margin: 0;
     color: #ffffff;
@@ -36,6 +45,37 @@
     width: 40px;
     height: 40px;
     flex-shrink: 0;
+}
+
+.searchbar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchbar-input{
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    -webkit-transition: width 0.36s ease;
+    transition: width 0.36s ease;
+}
+
+.topbar-container:hover .searchbar-input,
+.searchbar-container:focus-within .searchbar-input,
+.searchbar-input:not(:placeholder-shown) {
+    width: 260px;
+    height: 48px;
+    opacity: 1;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.11);
 }
 
 @media (max-width: 560px) {
