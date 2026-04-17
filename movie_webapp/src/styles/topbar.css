@@ -14,11 +14,11 @@
     gap: 30px;
     padding: 15px 80px;
     min-height: 60px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(117, 117, 117, 0.37);
     border-radius: 28px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.3px);
-    -webkit-backdrop-filter: blur(1.3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.884);
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 
 }
