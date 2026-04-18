@@ -29,7 +29,7 @@ app.get("/movies", async (req, res) => {
 });
 
 //tv shows route
-app.get("/movies", async (req, res) => {
+app.get("/tv", async (req, res) => {
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}`
