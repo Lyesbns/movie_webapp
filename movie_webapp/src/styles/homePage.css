@@ -56,6 +56,24 @@
     transform: scale(1.07);
 }
 
+.nav-button-clicked{
+    align-items: center;
+    min-width: 130px;
+    height: 45px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 18px;
+    background: rgba(61, 61, 61, 0.548);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.52);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    color: #ffffff;
+    font-family: 'Open Sans', 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 750;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
 @keyframes gridFade {
     from {
         opacity: 0.4;

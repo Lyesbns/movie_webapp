@@ -29,8 +29,8 @@ function HomePage() {
             <div className='homePage-container'>
                 <TopBar />
                 <div className='nav-container'>
-                    <button className='nav-button' onClick={() => setNav("movies")}>Movies</button>
-                    <button className='nav-button' onClick={() => setNav("shows")}>Shows</button>
+                    <button className={nav === "movies" ? 'nav-button-clicked' : 'nav-button'} onClick={() => setNav("movies")}>Movies</button>
+                    <button className={nav === "shows" ? 'nav-button-clicked' : 'nav-button'} onClick={() => setNav("shows")}>Shows</button>
                 </div>
                 <div className='moviegrid-container'>
                     {nav === "movies" && movies.map((movie) => (
