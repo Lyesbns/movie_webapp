@@ -2,7 +2,7 @@ import "../styles/movieCard.css";
 
 function MovieCard({ movie }) {
   const posterUrl = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : "";
-  const rating = movie.vote_average ?? 0;
+  const rating = parseFloat(movie.vote_average.toFixed(1)) ?? 0;
 
   return (
     <div className="movie-card">
@@ -22,7 +22,7 @@ function MovieCard({ movie }) {
 
       <div className="movie-card__footer">
         <h3 className="movie-card__title">{movie.title}</h3>
-        {movie.release_date && <p className="movie-card__releaseDate">{movie.release_date}</p>}
+        {movie.release_date && <p className="movie-card__releaseDate">{movie.release_date.split('-')[0]}</p>}
       </div>
 
     </div>
