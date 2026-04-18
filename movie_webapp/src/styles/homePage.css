@@ -76,21 +76,21 @@
     }
 }
 
-.movie-card {
+.movie-card-wrap {
     opacity: 0;
     transform: scale(0.8);
-    animation: cardEnter 0.8s ease-out forwards;
+    animation: cardEnter 0.6s cubic-bezier(0.22, 1.5, 0.36, 1) forwards;
 }
 
-.movie-card:nth-child(1) { animation-delay: 0.05s; }
-.movie-card:nth-child(2) { animation-delay: 0.1s; }
-.movie-card:nth-child(3) { animation-delay: 0.15s; }
-.movie-card:nth-child(4) { animation-delay: 0.2s; }
-.movie-card:nth-child(5) { animation-delay: 0.25s; }
-.movie-card:nth-child(6) { animation-delay: 0.3s; }
-.movie-card:nth-child(7) { animation-delay: 0.35s; }
-.movie-card:nth-child(8) { animation-delay: 0.4s; }
-.movie-card:nth-child(9) { animation-delay: 0.45s; }
-.movie-card:nth-child(10) { animation-delay: 0.5s; }
-.movie-card:nth-child(n+11) { animation-delay: 0.5s; }
+.movie-card-wrap:nth-child(1) { animation-delay: 0.05s; }
+.movie-card-wrap:nth-child(2) { animation-delay: 0.1s; }
+.movie-card-wrap:nth-child(3) { animation-delay: 0.15s; }
+.movie-card-wrap:nth-child(4) { animation-delay: 0.2s; }
+.movie-card-wrap:nth-child(5) { animation-delay: 0.25s; }
+.movie-card-wrap:nth-child(6) { animation-delay: 0.3s; }
+.movie-card-wrap:nth-child(7) { animation-delay: 0.35s; }
+.movie-card-wrap:nth-child(8) { animation-delay: 0.4s; }
+.movie-card-wrap:nth-child(9) { animation-delay: 0.45s; }
+.movie-card-wrap:nth-child(10) { animation-delay: 0.5s; }
+.movie-card-wrap:nth-child(n+11) { animation-delay: 0.5s; }
 

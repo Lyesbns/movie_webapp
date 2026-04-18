@@ -8,7 +8,8 @@ function MovieCard({ movie, type }) {
   const displayYear = displayDate ? displayDate.split("-")[0] : "";
 
   return (
-    <div className="movie-card">
+    <div className="movie-card-wrap">
+      <div className="movie-card">
 
       <img
         className="movie-card__poster"
@@ -28,6 +29,7 @@ function MovieCard({ movie, type }) {
         {displayYear && <p className="movie-card__releaseDate">{displayYear}</p>}
       </div>
 
+      </div>
     </div>
   );
 }
