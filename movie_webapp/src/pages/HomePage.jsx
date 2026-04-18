@@ -7,7 +7,7 @@ function HomePage() {
 
     const [movies , setMovies] = useState([])
     const [shows , setShows] = useState([])
-    const [nav , setNav] = useState("movies")
+    const [nav , setNav] = useState("shows")
 
     useEffect(() => {
     fetch("http://localhost:3000/movies")
@@ -29,8 +29,8 @@ function HomePage() {
             <div className='homePage-container'>
                 <TopBar />
                 <div className='nav-container'>
-                    <button className='nav-button'>Movies</button>
-                    <button className='nav-button'>Shows</button>
+                    <button className='nav-button' onClick={() => setNav("movies")}>Movies</button>
+                    <button className='nav-button' onClick={() => setNav("shows")}>Shows</button>
                 </div>
                 <div className='moviegrid-container'>
                     {nav === "movies" && movies.map((movie) => (
