@@ -1,8 +1,11 @@
 import "../styles/movieCard.css";
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, type }) {
   const posterUrl = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : "";
-  const rating = parseFloat(movie.vote_average.toFixed(1)) ?? 0;
+  const rating = Number((movie.vote_average ?? 0).toFixed(1));
+  const displayTitle = type === "show" ? movie.name : movie.title;
+  const displayDate = type === "show" ? movie.first_air_date : movie.release_date;
+  const displayYear = displayDate ? displayDate.split("-")[0] : "";
 
   return (
     <div className="movie-card">
@@ -10,7 +13,7 @@ function MovieCard({ movie }) {
       <img
         className="movie-card__poster"
         src={posterUrl}
-        alt={movie.title}
+        alt={displayTitle}
         loading="lazy"
       />
 
@@ -21,8 +24,8 @@ function MovieCard({ movie }) {
       </div>
 
       <div className="movie-card__footer">
-        <h3 className="movie-card__title">{movie.title}</h3>
-        {movie.release_date && <p className="movie-card__releaseDate">{movie.release_date.split('-')[0]}</p>}
+        <h3 className="movie-card__title">{displayTitle}</h3>
+        {displayYear && <p className="movie-card__releaseDate">{displayYear}</p>}
       </div>
 
     </div>
