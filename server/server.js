@@ -11,7 +11,6 @@ app.use(cors());
 const PORT = 3000;
 const API_KEY = process.env.TMDB_KEY;
 
-// Test route
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
@@ -21,6 +20,19 @@ app.get("/movies", async (req, res) => {
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
+    );
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch movies" });
+  }
+});
+
+//tv shows route
+app.get("/movies", async (req, res) => {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}`
     );
     const data = await response.json();
     res.json(data);
