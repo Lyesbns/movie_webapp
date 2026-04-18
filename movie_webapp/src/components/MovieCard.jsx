@@ -1,26 +1,28 @@
 import "../styles/movieCard.css";
 
 function MovieCard({ movie }) {
+  const posterUrl = movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : "";
+  const rating = movie.vote_average ?? 0;
 
   return (
     <div className="movie-card">
 
       <img
         className="movie-card__poster"
-        src={movie.pictureUrl}
+        src={posterUrl}
         alt={movie.title}
         loading="lazy"
       />
 
-      <div className="movie-card__rating" aria-label={`Rating: ${8} out of 10`}>
+      <div className="movie-card__rating" aria-label={`Rating: ${rating} out of 10`}>
         <span className="movie-card__rating-star">★</span>
-        <span className="movie-card__rating-score">{8}</span>
+        <span className="movie-card__rating-score">{rating}</span>
         <span className="movie-card__rating-max">/10</span>
       </div>
 
       <div className="movie-card__footer">
         <h3 className="movie-card__title">{movie.title}</h3>
-        {movie.genre && <p className="movie-card__genre">{movie.genre}</p>}
+        {movie.release_date && <p className="movie-card__releaseDate">{movie.release_date}</p>}
       </div>
 
     </div>

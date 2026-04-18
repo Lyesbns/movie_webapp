@@ -125,7 +125,7 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.925);
 }
 
-.movie-card__genre {
+.movie-card__releaseDate {
   font-family: 'Bebas Neue', sans-serif;;
   font-size: 12px;
   font-weight: 600;
